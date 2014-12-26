@@ -35,3 +35,5 @@ curl https://api.github.com/users/lestrrat/repos | tp repos.md.tmpl > repos.md
 ```
 
 And voila, I get a nice markdown file!
+
+http://peco.github.io/images/tp-demo.gif
