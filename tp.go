@@ -7,13 +7,25 @@ import (
 	"text/template"
 )
 
+const version = "0.0.1"
+
 func main() {
 	os.Exit(_main())
 }
 
+func usage() {
+	fmt.Fprintf(os.Stderr, `tp version %s
+
+Usage:
+  e.g.
+    tp template.tmpl < variables.json
+    curl http://example.com/resource.json | tp template.tmpl
+`, version)
+}
+
 func _main() int {
 	if len(os.Args) != 2 {
-		fmt.Fprintf(os.Stderr, "Usage: tp template < variables.json\n")
+		usage()
 		return 1
 	}
 
