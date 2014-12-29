@@ -22,4 +22,4 @@ fi
 cd /work/src/github.com/lestrrat/tp
 
 /build-tp.sh
-ghr --debug -u "$GITHUB_USERNAME" $TP_VERSION /work/artifacts/snapshot
+ghr --debug --replace -u "$GITHUB_USERNAME" $TP_VERSION /work/artifacts/snapshot
