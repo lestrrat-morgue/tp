@@ -1,0 +1,9 @@
+Changes
+=======
+
+0.0.2 - Jan 01, 2015
+   * Use filepath.Base(filename) as the key to text/template's
+     ExecuteTemplate
+
+0.0.1 - Dec 26, 2014
+   * Initial release
