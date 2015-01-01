@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"path/filepath"
 	"text/template"
 )
 
@@ -46,7 +47,8 @@ func _main() int {
 		return 1
 	}
 
-	if err := t.ExecuteTemplate(os.Stdout, os.Args[1], v); err != nil {
+	base := filepath.Base(os.Args[1])
+	if err := t.ExecuteTemplate(os.Stdout, base, v); err != nil {
 		fmt.Fprintf(os.Stderr, "Failed to execute template: %s\n", err)
 		return 1
 	}
